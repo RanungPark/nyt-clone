@@ -34,8 +34,12 @@ const GlobalStyle = createGlobalStyle`
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
+  *[hidden] {
+    display: none;
+  }
   body {
-    line-height: 1;
+    font-weight: 400;
+    line-height: 1.2;
     font-family: 'Noto Sans KR', sans-serif;
     width: 100vw;
     height: 100vh;
