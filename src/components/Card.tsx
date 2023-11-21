@@ -25,7 +25,7 @@ const Headline = styled.div`
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.1em;
   max-height: 56px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -65,7 +65,7 @@ const Source = styled.div`
   white-space: nowrap;
   max-width: 80px;
   line-height: 20px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.1em;
 `
 
 const Byline = styled.div`
@@ -75,13 +75,13 @@ const Byline = styled.div`
   white-space: nowrap;
   max-width: 110px;
   line-height: 20px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.1em;
 `
 
 const PubDate = styled.div`
   font-size: 13px;
   line-height: 20px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.08em;
   white-space: nowrap;
 `
 const Card = ({doc}:{doc :IDocs}) => {
@@ -102,7 +102,7 @@ const Card = ({doc}:{doc :IDocs}) => {
       <CardFirstBox>
         <Headline>
           <Link to={doc.web_url}>
-          {doc.headline.main}
+            {doc.headline.main}
           </Link>
         </Headline>
         <StarBox>
