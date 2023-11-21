@@ -3,12 +3,12 @@ import { useQuery } from 'react-query';
 import { styled } from 'styled-components';
 import { IResult, fetchArticleSearch } from '../api';
 import Card from '../components/Card';
+import Filter from '../components/Filter';
 
 const Wapper = styled.div`
   height: 100%;
   padding: 20px;
   overflow: scroll;
-  margin-bottom: 74px;
   &{
     -ms-overflow-style: none;
  }
@@ -30,12 +30,11 @@ const Cards = styled.ul`
 const HomeScreen = () => {
   const {isLoading, data} = useQuery<IResult>('article', fetchArticleSearch)
 
-  
-
   return (
     <Wapper>
       {
         isLoading ? (<Loading>Loading...</Loading>) : <>
+          <Filter />
           {
             data?.response?.docs ?
             (<Cards>
