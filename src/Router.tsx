@@ -13,6 +13,10 @@ const router = createBrowserRouter([
         element: <HomeScreen />
       },
       {
+        path: '/filter',
+        element: <HomeScreen />
+      },
+      {
         path: 'scrap',
         element: <ScrapScreen />
       }
