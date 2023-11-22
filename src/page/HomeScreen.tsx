@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import { styled } from 'styled-components';
-import { IResult, fetchArticleSearch } from '../api';
+import { IResult, fetchArticleSearch } from '../libs/api';
 import Card from '../components/Card';
 import Filter from '../components/Filter';
 
