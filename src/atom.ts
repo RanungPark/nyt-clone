@@ -1,4 +1,5 @@
 import { atom } from 'recoil';
+import { countrys } from './libs/countrys';
 
 export const isHomeScreenAtom = atom({
   key: 'isHomeScreen',
@@ -15,7 +16,16 @@ export const isPubDateAtom = atom({
   default: '',
 })
 
-export const isGlocationsAtom = atom({
+export const isCountrysAtom = atom({
   key: 'isGlocations',
-  default: [],
+  default: countrys,
+})
+
+export const isSubmitAtom = atom({
+  key: 'isSubmit',
+  default: {
+    headline: '',
+    pubDate: '',
+    countrys: {}
+  },
 })
