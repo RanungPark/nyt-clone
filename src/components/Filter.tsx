@@ -138,7 +138,7 @@ const Filter = () => {
     setSubmitDate({
       headline,
       pubDate,
-      countrys: {...countrys}
+      countrys: [...countrys],
     })
     navigate('/')
   }
