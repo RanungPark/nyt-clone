@@ -1,5 +1,5 @@
 import { atom } from 'recoil';
-import { countrys } from './libs/countrys';
+import { countrys, IContrys } from './libs/countrys';
 
 export const isHomeScreenAtom = atom({
   key: 'isHomeScreen',
@@ -26,6 +26,6 @@ export const isSubmitAtom = atom({
   default: {
     headline: '',
     pubDate: '',
-    countrys: {}
+    countrys: [] as IContrys[],
   },
 })
