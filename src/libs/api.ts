@@ -1,3 +1,4 @@
+import { IContrys } from './countrys';
 const BASE_URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json`;
 const API_KEY = `zM9Z9uYAkeutNyyJeibb2jEjSGSIVX0g`;
 
@@ -83,9 +84,43 @@ export interface IResult {
 
 interface IFetchArticleSearch {
   page?: number;
-  q?: string;
+  headline?: string;
+  pub_date?: string;
+  glocations?: string[];
 }
 
-export function fetchArticleSearch() {
-  return fetch(`${BASE_URL}?sort=newest&api-key=${API_KEY}`).then(response => response.json())
+export function fetchArticleSearch(params: IFetchArticleSearch = {}) {
+  const { page, headline, pub_date, glocations } = params;
+
+  const fqPubDate = pub_date && `pub_date:("${pub_date}")`;
+  const fqHeadLine = headline && `headline:("${headline}")`;
+  const fqGlocations = []
+
+  if(!!glocations?.length) {
+    for(let i = 0; i < glocations.length; i++) {
+      fqGlocations[i] = `glocations.contains:("${glocations[i]}")`;
+    }
+  }
+
+  const fqArray = []
+
+  if(fqPubDate) {
+    fqArray.push(fqPubDate)
+  }
+
+  if(fqHeadLine) {
+    fqArray.push(fqHeadLine)
+  }
+
+  if(fqGlocations.length) {
+    fqArray.push(...fqGlocations);
+  }
+  
+  let fq = ''
+
+  if(!!fqArray.join('')) {
+    fq = fqArray.join(' AND ')
+  }
+ 
+  return fetch(`${BASE_URL}?sort=newest&page=${page}${fq ? `&fq=${fq}` : ''}&api-key=${API_KEY}`).then(response => response.json())
 }
