@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { IDocs } from '../libs/api';
 import { Link } from 'react-router-dom';
 import starSub from '../svgs/StarSub.svg';
 import starFill from '../svgs/StarFill.svg';
+import { useSetRecoilState } from 'recoil';
+import { isScrapAtom } from '../atom';
 
 
 const Wapper = styled.li`
@@ -86,9 +88,24 @@ const PubDate = styled.div`
   white-space: nowrap;
 `
 const Card = ({doc}:{doc :IDocs}) => {
+  const setScrap = useSetRecoilState(isScrapAtom);
+  const [isStar, setIsStar] = useState(false);
 
-  const originalDateStr = doc.pub_date
-  let formattedDate
+  const {
+    web_url,
+    headline: {
+      main : headlineMain,
+    },
+    _id: id,
+    source,
+    byline: {
+      original: bylineOriginal
+    },
+    pub_date
+  } = doc
+
+  const originalDateStr = pub_date
+  let formattedDate = ""
   if(originalDateStr){
     const originalDate = new Date(originalDateStr)
     formattedDate = originalDate.toLocaleDateString("en-us", {
@@ -98,22 +115,36 @@ const Card = ({doc}:{doc :IDocs}) => {
     }).replaceAll("/",".") + '. (' + originalDate.toLocaleDateString('en-US', {weekday: 'short'}) + ')'
   }
 
+  const handleStarClick = () => {
+    setIsStar(prev => !prev)
+    setScrap(prev => [...prev, {
+      web_url,
+      headline: headlineMain,
+      source,
+      byline: bylineOriginal,
+      formattedDate,
+      _id: id,
+    }])
+  }
+
   return (
     <Wapper>
       <CardFirstBox>
         <Headline>
-          <Link to={doc.web_url}>
-            {doc.headline.main}
+          <Link to={web_url}>
+            {headlineMain}
           </Link>
         </Headline>
-        <StarBox>
-          <img src={starSub} alt='starSub'/>
+        <StarBox onClick={handleStarClick}>
+          {
+            isStar? <img key={id} src={starFill} alt='starFill'/> : <img key={id} src={starSub} alt='starSub'/>
+          }
         </StarBox>
       </CardFirstBox>
       <CardSecondBox>
         <Writer>
-          <Source>{doc.source}</Source>
-          <Byline>{doc.byline.original}</Byline>
+          <Source>{source}</Source>
+          <Byline>{bylineOriginal}</Byline>
         </Writer>
         <PubDate>{formattedDate}</PubDate>
       </CardSecondBox>
