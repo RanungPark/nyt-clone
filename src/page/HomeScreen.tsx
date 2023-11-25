@@ -5,7 +5,7 @@ import { IResult, fetchArticleSearch } from '../libs/api';
 import Card from '../components/Card';
 import Filter from '../components/Filter';
 import { useRecoilValue } from 'recoil';
-import { isSubmitAtom } from '../atom';
+import { isScrapAtom, isSubmitAtom } from '../atom';
 
 const Wapper = styled.div`
   height: 100%;
@@ -54,6 +54,10 @@ const NoData = styled.div`
 const HomeScreen = () => {
   const submitDate = useRecoilValue(isSubmitAtom);
   const {countrys, headline, pubDate} = submitDate
+  const scrap = useRecoilValue(isScrapAtom);
+
+  console.log(scrap);
+  
 
   const [page, setPage] = useState(1)
 
@@ -71,7 +75,6 @@ const HomeScreen = () => {
 
   useEffect(()=>{
     refetch()
-    
   },[submitDate]);
 
   return (
