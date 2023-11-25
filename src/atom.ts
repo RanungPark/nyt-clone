@@ -29,3 +29,17 @@ export const isSubmitAtom = atom({
     countrys: [] as IContrys[],
   },
 })
+
+interface IScrap {
+  web_url: string;
+  headline: string;
+  source: string;
+  byline: string;
+  formattedDate: string;
+  _id: string;
+}
+
+export const isScrapAtom = atom({
+  key: 'isScrap',
+  default: [] as IScrap[],
+})
