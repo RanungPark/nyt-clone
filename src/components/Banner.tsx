@@ -5,7 +5,7 @@ import cellular from '../svgs/Cellular.svg';
 import wiFi from '../svgs/Wi-Fi.svg';
 import battery from '../svgs/Battery.svg';
 
-const Wapper = styled.div`
+const Wrapper = styled.div`
   width: 100%;
   height: 44px;
   display: flex;
@@ -31,7 +31,7 @@ const Remain = styled.div`
 
 const Banner = () => {
   return (
-    <Wapper>
+    <Wrapper>
       <Time>
         <img src={time} alt='time'/>
       </Time>
@@ -40,7 +40,7 @@ const Banner = () => {
         <img src={wiFi} alt='wiFi'/>
         <img src={battery} alt='battery'/>
       </Remain>
-    </Wapper>
+    </Wrapper>
   );
 };
 

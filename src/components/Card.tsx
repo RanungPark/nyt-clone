@@ -8,7 +8,7 @@ import { useSetRecoilState } from 'recoil';
 import { isScrapAtom } from '../atom';
 
 
-const Wapper = styled.li`
+const Wrapper = styled.li`
   background-color: ${props => props.theme.white90};
   border-radius: 8px;
   padding: 10px 20px;
@@ -128,7 +128,7 @@ const Card = ({doc}:{doc :IDocs}) => {
   }
 
   return (
-    <Wapper>
+    <Wrapper>
       <CardFirstBox>
         <Headline>
           <Link to={web_url}>
@@ -148,7 +148,7 @@ const Card = ({doc}:{doc :IDocs}) => {
         </Writer>
         <PubDate>{formattedDate}</PubDate>
       </CardSecondBox>
-    </Wapper>
+    </Wrapper>
   );
 };
 

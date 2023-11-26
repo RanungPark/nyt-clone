@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import {styled} from 'styled-components';
 
-const Wapper = styled.div`
+const Wrapper = styled.div`
   width: 375px;
   height: 812px;
   border-radius: 30px;
@@ -17,12 +17,12 @@ const Wapper = styled.div`
 
 const App = () => {
   return (
-    <Wapper>
+    <Wrapper>
       <Banner />
       <Header />
       <Outlet />
       <Footer />
-    </Wapper>
+    </Wrapper>
   );
 };
 

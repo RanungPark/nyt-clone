@@ -8,7 +8,7 @@ import homeFill from '../svgs/HomeFill.svg';
 import scrap from '../svgs/Scrap.svg';
 import scrapFill from '../svgs/ScrapFill.svg';
 
-const Wapper = styled.div`
+const Wrapper = styled.div`
   background-color: ${props => props.theme.black100};
   border-radius: 30px;
   display: flex;
@@ -74,7 +74,7 @@ const Footer = () => {
   } 
 
   return (
-    <Wapper>
+    <Wrapper>
       <ToHome onClick={handleChangeHomeScreen} isHomeScreen={isHomeScreen}>
         {
           isHomeScreen ? <img src={homeFill} alt='homeFill'/> : <img src={home} alt='home'/>
@@ -91,7 +91,7 @@ const Footer = () => {
           스크랩
         </span>
       </ToScrap>
-    </Wapper>
+    </Wrapper>
   );
 };
 

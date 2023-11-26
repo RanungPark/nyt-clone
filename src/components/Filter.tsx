@@ -6,7 +6,7 @@ import Glocations from './Glocations';
 import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import { isCountrysAtom, isHeadlineAtom, isPubDateAtom, isSubmitAtom } from '../atom';
 
-const Wapper = styled.div`
+const Wrapper = styled.div`
   position: absolute;
   left: 0;
   top: 0;
@@ -148,7 +148,7 @@ const Filter = () => {
     <>
     {
       filterMatch.pathname === '/filter' &&
-      <Wapper>
+      <Wrapper>
           <FilterList>
             <Headline>
               <Title>
@@ -183,7 +183,7 @@ const Filter = () => {
             </GlocationsBox>
             <Button onClick={handleButtonClick}>필터 적용하기</Button>
           </FilterList>
-      </Wapper>
+      </Wrapper>
     }
     </>
   );
