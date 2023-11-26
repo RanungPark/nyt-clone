@@ -8,7 +8,7 @@ import calendarCheckFill from '../svgs/CalendarCheckFill.svg';
 import { useRecoilValue } from 'recoil';
 import { isSubmitAtom } from '../atom';
 
-const Wapper = styled.div`
+const Wrapper = styled.div`
   width: 100%;
   height: 60px;
   background-color: ${props => props.theme.white100};
@@ -80,7 +80,7 @@ const Header = () => {
   }
 
   return (
-    <Wapper>
+    <Wrapper>
       <HeaderItems>
         <Headline onClick={handleClick} booleanHeadline={!!headline}>
           {
@@ -104,7 +104,7 @@ const Header = () => {
           }
         </Glocations>
       </HeaderItems>
-    </Wapper>
+    </Wrapper>
   );
 };
 
