@@ -1,4 +1,3 @@
-import { IContrys } from './countrys';
 const BASE_URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json`;
 const API_KEY = `zM9Z9uYAkeutNyyJeibb2jEjSGSIVX0g`;
 
@@ -89,6 +88,13 @@ interface IFetchArticleSearch {
   glocations?: string[];
 }
 
+export interface IExtendedResult extends IResult {
+  customInfo: {
+    total_pages: number;
+    page: number;
+  };
+}
+
 export function fetchArticleSearch(params: IFetchArticleSearch = {}) {
   const { page, headline, pub_date, glocations } = params;
 
@@ -122,5 +128,13 @@ export function fetchArticleSearch(params: IFetchArticleSearch = {}) {
     fq = fqArray.join(' AND ')
   }
  
-  return fetch(`${BASE_URL}?sort=newest&page=${page}${fq ? `&fq=${fq}` : ''}&api-key=${API_KEY}`).then(response => response.json())
+  return fetch(`${BASE_URL}?sort=newest&page=${page}${fq ? `&fq=${fq}` : ''}&api-key=${API_KEY}`)
+    .then(response => response.json())
+    .then((data: IResult) => ({
+      ...data,
+      customInfo: {
+        total_pages: 5,
+        page: page || 1,
+      },
+    }));
 }
