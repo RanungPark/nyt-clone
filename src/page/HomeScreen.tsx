@@ -5,7 +5,7 @@ import { IExtendedResult, fetchArticleSearch } from '../libs/api';
 import Card from '../components/Card';
 import Filter from '../components/Filter';
 import { useRecoilValue } from 'recoil';
-import { isScrapAtom, isSubmitAtom } from '../atom';
+import { ScrapsState, SubmitState } from '../atom';
 import { useInView } from 'react-intersection-observer';
 
 const Wrapper = styled.div`
@@ -52,10 +52,9 @@ const NoData = styled.div`
 `;
 
 const HomeScreen = () => {
-  const submitDate = useRecoilValue(isSubmitAtom);
+  const submitDate = useRecoilValue(SubmitState);
   const { countrys, headline, pubDate } = submitDate;
-  const scrap = useRecoilValue(isScrapAtom);
-
+  
   const {
     data,
     fetchNextPage,
