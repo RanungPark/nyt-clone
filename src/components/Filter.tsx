@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import vector from '../svgs/Vector.svg'
 import Glocations from './Glocations';
 import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
-import { isCountrysAtom, isHeadlineAtom, isPubDateAtom, isSubmitAtom } from '../atom';
+import { CountrysState, HeadlineState, PubDateState, SubmitState } from '../atom';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -119,10 +119,10 @@ const Button = styled.button`
 
 const Filter = () => {
   const filterMatch = useLocation()
-  const [headline, setHeadline] = useRecoilState(isHeadlineAtom);
-  const [pubDate, setPubDate] = useRecoilState(isPubDateAtom);
-  const setSubmitDate = useSetRecoilState(isSubmitAtom)
-  const countrys = useRecoilValue(isCountrysAtom)
+  const [headline, setHeadline] = useRecoilState(HeadlineState);
+  const [pubDate, setPubDate] = useRecoilState(PubDateState);
+  const setSubmitDate = useSetRecoilState(SubmitState)
+  const countrys = useRecoilValue(CountrysState)
 
   const navigate = useNavigate()
 

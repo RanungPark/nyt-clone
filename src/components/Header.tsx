@@ -6,7 +6,7 @@ import calendarCheck from '../svgs/CalendarCheck.svg';
 import searchFill from '../svgs/SearchFill.svg';
 import calendarCheckFill from '../svgs/CalendarCheckFill.svg';
 import { useRecoilValue } from 'recoil';
-import { isSubmitAtom } from '../atom';
+import { SubmitState } from '../atom';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -67,7 +67,7 @@ const Glocations = styled.div<{booleanCountry : boolean}>`
 
 const Header = () => {
   const naviagate = useNavigate()
-  const submitData = useRecoilValue(isSubmitAtom);
+  const submitData = useRecoilValue(SubmitState);
   const {countrys, headline, pubDate} = submitData
 
   const selectCountry = countrys.map((country) => (

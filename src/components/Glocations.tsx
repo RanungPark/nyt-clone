@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useRecoilState } from 'recoil';
-import { isCountrysAtom } from '../atom';
+import { CountrysState } from '../atom';
 
 const GlocationsList = styled.ul`
   white-space: pre-line;
@@ -26,7 +26,7 @@ const GlocationsItem = styled.li<{clickState: boolean}>`
 `
 
 const Glocations = () => {
-  const [countrys, setCountrys] = useRecoilState(isCountrysAtom);
+  const [countrys, setCountrys] = useRecoilState(CountrysState);
 
   const handleCountryChagne = (id: string) => {
     const updatedCountrys = countrys.map(country => ({
