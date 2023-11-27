@@ -4,8 +4,8 @@ import { IDocs } from '../libs/api';
 import { Link } from 'react-router-dom';
 import starSub from '../svgs/StarSub.svg';
 import starFill from '../svgs/StarFill.svg';
-import { useSetRecoilState } from 'recoil';
-import { isScrapAtom } from '../atom';
+import { useRecoilState } from 'recoil';
+import { ScrapsState } from '../atom';
 
 
 const Wrapper = styled.li`
@@ -88,7 +88,7 @@ const PubDate = styled.div`
   white-space: nowrap;
 `
 const Card = ({doc}:{doc :IDocs}) => {
-  const setScrap = useSetRecoilState(isScrapAtom);
+  const [scraps, setScraps] = useRecoilState(ScrapsState);
   const [isStar, setIsStar] = useState(false);
 
   const {
@@ -116,15 +116,25 @@ const Card = ({doc}:{doc :IDocs}) => {
   }
 
   const handleStarClick = () => {
-    setIsStar(prev => !prev)
-    setScrap(prev => [...prev, {
+    setIsStar(true)
+    setScraps(prev => [...prev, {
       web_url,
       headline: headlineMain,
       source,
       byline: bylineOriginal,
       formattedDate,
       _id: id,
+      Star: true,
     }])
+    localStorage.setItem('isScraps', JSON.stringify([...scraps, {
+      web_url,
+      headline: headlineMain,
+      source,
+      byline: bylineOriginal,
+      formattedDate,
+      _id: id,
+      Star: true,
+    }]))
   }
 
   return (
@@ -135,11 +145,15 @@ const Card = ({doc}:{doc :IDocs}) => {
             {headlineMain}
           </Link>
         </Headline>
-        <StarBox onClick={handleStarClick}>
-          {
-            isStar? <img key={id} src={starFill} alt='starFill'/> : <img key={id} src={starSub} alt='starSub'/>
-          }
-        </StarBox>
+        {
+          isStar ? 
+          <StarBox onClick={handleStarClick}>
+            <img key={id} src={starFill} alt='starFill'/>
+          </StarBox> : 
+          <StarBox onClick={handleStarClick}>
+            <img key={id} src={starSub} alt='starSub'/>
+          </StarBox>
+        }
       </CardFirstBox>
       <CardSecondBox>
         <Writer>
