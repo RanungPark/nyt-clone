@@ -6,23 +6,23 @@ export const isHomeScreenAtom = atom({
   default: true,
 })
 
-export const isHeadlineAtom = atom({
-  key: 'isHeadline',
+export const HeadlineState = atom({
+  key: 'Headline',
   default: '',
 })
 
-export const isPubDateAtom = atom({
-  key: 'isPubDate',
+export const PubDateState = atom({
+  key: 'PubDate',
   default: '',
 })
 
-export const isCountrysAtom = atom({
-  key: 'isGlocations',
+export const CountrysState = atom({
+  key: 'Glocations',
   default: countrys,
 })
 
-export const isSubmitAtom = atom({
-  key: 'isSubmit',
+export const SubmitState = atom({
+  key: 'Submit',
   default: {
     headline: '',
     pubDate: '',
@@ -30,16 +30,26 @@ export const isSubmitAtom = atom({
   },
 })
 
-interface IScrap {
+export interface IScrap {
   web_url: string;
   headline: string;
   source: string;
   byline: string;
   formattedDate: string;
   _id: string;
+  Star: boolean;
 }
 
-export const isScrapAtom = atom({
-  key: 'isScrap',
-  default: [] as IScrap[],
+export const ScrapsState = atom<IScrap[]>({
+  key: 'scraps',
+  default: (() => {
+    const stroeScrap = localStorage.getItem('isScraps');
+    if(stroeScrap) {
+      const parseScrap = JSON.parse(stroeScrap);
+      if(Array.isArray(parseScrap)){
+        return parseScrap;
+      }
+    }
+    return [];
+  })(),
 })
