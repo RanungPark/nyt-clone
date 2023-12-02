@@ -64,12 +64,12 @@ const Footer = () => {
   const navigate = useNavigate()
 
   const handleChangeHomeScreen = () => {
-    navigate('/')
+    navigate('/nyt-clone')
     setIsHomeScreen(true)
   } 
 
   const handleChangeScrapScreen = () => {
-    navigate('/scrap')
+    navigate('/nyt-clone/scrap')
     setIsHomeScreen(false)
   } 
 

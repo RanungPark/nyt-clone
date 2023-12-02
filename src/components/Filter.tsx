@@ -140,14 +140,14 @@ const Filter = () => {
       pubDate,
       countrys: [...countrys],
     })
-    navigate('/')
+    navigate('/nyt-clone')
   }
 
 
   return (
     <>
     {
-      filterMatch.pathname === '/filter' &&
+      filterMatch.pathname === '/nyt-clone/filter' &&
       <Wrapper>
           <FilterList>
             <Headline>

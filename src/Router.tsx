@@ -5,7 +5,7 @@ import ScrapScreen from './page/ScrapScreen'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/nyt-clone',
     element: <App />,
     children: [
       {
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
         element: <HomeScreen />
       },
       {
-        path: '/filter',
+        path: 'filter',
         element: <HomeScreen />
       },
       {

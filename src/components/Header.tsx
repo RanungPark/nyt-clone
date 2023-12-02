@@ -76,7 +76,7 @@ const Header = () => {
   const filterCountry = selectCountry?.filter(Boolean)
 
   const handleClick = () => {
-    naviagate('/filter')
+    naviagate('/nyt-clone/filter')
   }
 
   return (
