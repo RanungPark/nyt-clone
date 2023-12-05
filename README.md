@@ -1,3 +1,7 @@
+## 프로젝트 보기
+
+"https://RanungPark.github.io/nyt-clone"
+
 ## 프로젝트 소개
 
 💁‍♂️New York Times에서 제공하는 API를 가공하여 기사 정보 검색 서비스 클론 코딩 프로젝트 
