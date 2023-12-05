@@ -50,7 +50,7 @@
 
 - input date를 커스텀을 통하여 클릭 시 캘린더가 나오며 선택 시 날짜가 적용됨
 
-<img width="82" alt="날짜 선택전" src="https://github.com/RanungPark/nyt-clone/assets/104816866/b8a995d9-2ee2-4f07-8b7f-cfd159568523"> ![날짜 선택후](https://github.com/RanungPark/nyt-clone/assets/104816866/feb3616f-6135-409c-8c14-f5b6db20c76d)
+<img width="163" alt="날짜 선택전" src="https://github.com/RanungPark/nyt-clone/assets/104816866/ea744dc6-5880-4604-876b-f4c035686ae4"> ![날짜 선택후](https://github.com/RanungPark/nyt-clone/assets/104816866/8de3640c-8d9b-4aa4-93a3-90a55cf84e20)
 
 ✅ filter 적용후 Home 화면
 
