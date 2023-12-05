@@ -10,7 +10,8 @@
 
 사용한 라이브러리 및 기술 스택을 작성합니다.
 
-<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white"><img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">
+<img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
 <img src="https://img.shields.io/badge/reactquery-FF4154?style=for-the-badge&logo=reactquery&logoColor=white">
 <img src="https://img.shields.io/badge/recoil-3578E5?style=for-the-badge&logo=recoil&logoColor=white">
 <img src="https://img.shields.io/badge/reactrouter-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white">
@@ -58,4 +59,5 @@
 
 - 필터에서 Korea라고 검색을 진행하였을 경우 Home에서 이름에 korea가 작성된 기사를 최신순으로 보여줌
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3d3e036e-900d-474c-8630-0583525bee1c/2b585bdd-fc1a-47e2-be26-da2456a0374b/Untitled.png)
+![filter 적용후 Home 화면](https://github.com/RanungPark/nyt-clone/assets/104816866/34ce0de6-50dc-490b-93b6-14763c178410)
+
