@@ -10,7 +10,7 @@
 
 사용한 라이브러리 및 기술 스택을 작성합니다.
 
-<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white"><img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white"> <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
 <img src="https://img.shields.io/badge/reactquery-FF4154?style=for-the-badge&logo=reactquery&logoColor=white">
 <img src="https://img.shields.io/badge/recoil-3578E5?style=for-the-badge&logo=recoil&logoColor=white">
 <img src="https://img.shields.io/badge/reactrouter-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white">
@@ -49,9 +49,7 @@
 ✅ input date 커스텀
 
 - input date를 커스텀을 통하여 클릭 시 캘린더가 나오며 선택 시 날짜가 적용됨
-<img width="82" alt="날짜 선택전" src="https://github.com/RanungPark/nyt-clone/assets/104816866/b8a995d9-2ee2-4f07-8b7f-cfd159568523">
-
-![날짜 선택후](https://github.com/RanungPark/nyt-clone/assets/104816866/feb3616f-6135-409c-8c14-f5b6db20c76d)
+<img width="82" alt="날짜 선택전" src="https://github.com/RanungPark/nyt-clone/assets/104816866/b8a995d9-2ee2-4f07-8b7f-cfd159568523"> ![날짜 선택후](https://github.com/RanungPark/nyt-clone/assets/104816866/feb3616f-6135-409c-8c14-f5b6db20c76d)
 
 ✅ filter 적용후 Home 화면
 
