@@ -29,7 +29,7 @@
 - 기사의 헤드라인을 클릭 시 해당 기사의 실제 뉴욕타임스 기사 페이지로 이동함
 - 기사의 출처와 기자, 발행일이 추가 정보로 보여짐
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3d3e036e-900d-474c-8630-0583525bee1c/2bbcf994-7350-4353-9525-fdd25b177c1d/Untitled.png)
+![home](https://github.com/RanungPark/nyt-clone/assets/104816866/b60cf8a4-11b6-4954-ad5f-5364762c367d)
 
 ✅ Scrap
 
@@ -37,7 +37,7 @@
 - 이곳에 저장된 기사는 해당 별을 눌러 구독을 취소하지 않은 이상 지속적으로 유지됨
     - 화면을 벗어나도 해당 기사는 유지됨
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3d3e036e-900d-474c-8630-0583525bee1c/3a5820d2-f4a9-4de2-ad56-fc7479a49795/Untitled.png)
+![scrap](https://github.com/RanungPark/nyt-clone/assets/104816866/2683cba3-ae4d-4203-b765-bee9242565de)
 
 ✅ Filter
 
@@ -45,19 +45,17 @@
 - 날짜는 기사의 발행일로 선택한 날짜에 발행한 기사들만 보여줌
 - 국가는 해당 국가와 관련된 기사를 보여줌
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3d3e036e-900d-474c-8630-0583525bee1c/26e09b51-32e9-45bf-9925-e31d9d80ff8c/Untitled.png)
+![filter](https://github.com/RanungPark/nyt-clone/assets/104816866/43705e30-c5cc-447a-a1a5-d5bb2ab64fff)
 
 ✅ input date 커스텀
 
 - input date를 커스텀을 통하여 클릭 시 캘린더가 나오며 선택 시 날짜가 적용됨
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3d3e036e-900d-474c-8630-0583525bee1c/c5e6b994-5fd1-4b79-a753-9afe4b193735/Untitled.png)
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/3d3e036e-900d-474c-8630-0583525bee1c/1d4bf519-ae54-4711-9a31-7588fefe26fe/Untitled.png)
+<img width="82" alt="날짜 선택전" src="https://github.com/RanungPark/nyt-clone/assets/104816866/b67617cb-9dce-4241-a8f4-b63586b542c6">
+![날짜 선택후](https://github.com/RanungPark/nyt-clone/assets/104816866/8d98bca2-de04-4266-9aee-4c6f344353cb)
 
 ✅ filter 적용후 Home 화면
 
 - 필터에서 Korea라고 검색을 진행하였을 경우 Home에서 이름에 korea가 작성된 기사를 최신순으로 보여줌
 
-![filter 적용후 Home 화면](https://github.com/RanungPark/nyt-clone/assets/104816866/34ce0de6-50dc-490b-93b6-14763c178410)
-
+![filter 적용후 Home 화면](https://github.com/RanungPark/nyt-clone/assets/104816866/e4f66669-ade4-4839-9c45-572d113fd980)
