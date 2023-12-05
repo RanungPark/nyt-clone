@@ -1,6 +1,6 @@
 ## 프로젝트 보기
 
-"https://RanungPark.github.io/nyt-clone"
+https://RanungPark.github.io/nyt-clone
 
 ## 프로젝트 소개
 
