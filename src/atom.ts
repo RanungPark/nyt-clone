@@ -1,34 +1,34 @@
-import { atom } from "recoil";
-import { countrys, IContrys } from "./libs/countrys";
+import { atom } from 'recoil';
+import { countrys, IContrys } from './libs/countrys';
 
 export const isHomeScreenAtom = atom({
-  key: "isHomeScreen",
+  key: 'isHomeScreen',
   default: true,
-});
+})
 
 export const HeadlineState = atom({
-  key: "Headline",
-  default: "",
-});
+  key: 'Headline',
+  default: '',
+})
 
 export const PubDateState = atom({
-  key: "PubDate",
-  default: "",
-});
+  key: 'PubDate',
+  default: '',
+})
 
 export const CountrysState = atom({
-  key: "Glocations",
+  key: 'Glocations',
   default: countrys,
-});
+})
 
 export const SubmitState = atom({
-  key: "Submit",
+  key: 'Submit',
   default: {
-    headline: "",
-    pubDate: "",
+    headline: '',
+    pubDate: '',
     countrys: [] as IContrys[],
   },
-});
+})
 
 export interface IScrap {
   web_url: string;
@@ -41,15 +41,15 @@ export interface IScrap {
 }
 
 export const ScrapsState = atom<IScrap[]>({
-  key: "scraps",
+  key: 'scraps',
   default: (() => {
-    const stroeScrap = localStorage.getItem("isScraps");
-    if (stroeScrap) {
+    const stroeScrap = localStorage.getItem('isScraps');
+    if(stroeScrap) {
       const parseScrap = JSON.parse(stroeScrap);
-      if (Array.isArray(parseScrap)) {
+      if(Array.isArray(parseScrap)){
         return parseScrap;
       }
     }
     return [];
   })(),
-});
+})

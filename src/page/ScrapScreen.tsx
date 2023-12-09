@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { useRecoilValue } from "recoil";
-import { ScrapsState } from "../atom";
-import ScrapCard from "../components/ScrapCard";
+import React from 'react';
+import styled from 'styled-components';
+import { useRecoilValue } from 'recoil';
+import { ScrapsState } from '../atom';
+import ScrapCard from '../components/ScrapCard';
 
 const Wrapper = styled.div`
   height: 596px;
@@ -28,9 +28,12 @@ const ScrapScreen = () => {
   return (
     <Wrapper>
       <Cards>
-        {scraps.map((scrap) => (
-          <ScrapCard scrap={scrap} key={scrap._id} />
-        ))}
+        {
+          scraps.map(scrap => <ScrapCard 
+            scrap={scrap}
+            key={scrap._id}
+          />)
+        }
       </Cards>
     </Wrapper>
   );

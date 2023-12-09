@@ -72,13 +72,13 @@ export interface IResult {
   status: string;
   copyright: string;
   response: {
-    docs: IDocs[];
+    docs :IDocs[];
     meta: {
       hits: number;
       offset: number;
       time: number;
-    };
-  };
+    }
+  }
 }
 
 interface IFetchArticleSearch {
@@ -100,40 +100,36 @@ export function fetchArticleSearch(params: IFetchArticleSearch = {}) {
 
   const fqPubDate = pub_date && `pub_date:("${pub_date}")`;
   const fqHeadLine = headline && `headline:("${headline}")`;
-  const fqGlocations = [];
+  const fqGlocations = []
 
-  if (!!glocations?.length) {
-    for (let i = 0; i < glocations.length; i++) {
+  if(!!glocations?.length) {
+    for(let i = 0; i < glocations.length; i++) {
       fqGlocations[i] = `glocations.contains:("${glocations[i]}")`;
     }
   }
 
-  const fqArray = [];
+  const fqArray = []
 
-  if (fqPubDate) {
-    fqArray.push(fqPubDate);
+  if(fqPubDate) {
+    fqArray.push(fqPubDate)
   }
 
-  if (fqHeadLine) {
-    fqArray.push(fqHeadLine);
+  if(fqHeadLine) {
+    fqArray.push(fqHeadLine)
   }
 
-  if (fqGlocations.length) {
+  if(fqGlocations.length) {
     fqArray.push(...fqGlocations);
   }
+  
+  let fq = ''
 
-  let fq = "";
-
-  if (!!fqArray.join("")) {
-    fq = fqArray.join(" AND ");
+  if(!!fqArray.join('')) {
+    fq = fqArray.join(' AND ')
   }
-
-  return fetch(
-    `${BASE_URL}?sort=newest&page=${page}${
-      fq ? `&fq=${fq}` : ""
-    }&api-key=${API_KEY}`
-  )
-    .then((response) => response.json())
+ 
+  return fetch(`${BASE_URL}?sort=newest&page=${page}${fq ? `&fq=${fq}` : ''}&api-key=${API_KEY}`)
+    .then(response => response.json())
     .then((data: IResult) => ({
       ...data,
       customInfo: {
