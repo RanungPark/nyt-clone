@@ -1,27 +1,27 @@
-import {createBrowserRouter} from 'react-router-dom'
-import App from './App'
-import HomeScreen from './page/HomeScreen'
-import ScrapScreen from './page/ScrapScreen'
+import { createBrowserRouter } from "react-router-dom";
+import App from "./App";
+import HomeScreen from "./page/HomeScreen";
+import ScrapScreen from "./page/ScrapScreen";
 
 const router = createBrowserRouter([
   {
-    path: '/nyt-clone',
+    path: "/nyt-clone",
     element: <App />,
     children: [
       {
-        path: '',
-        element: <HomeScreen />
+        path: "",
+        element: <HomeScreen />,
       },
       {
-        path: 'filter',
-        element: <HomeScreen />
+        path: "filter",
+        element: <HomeScreen />,
       },
       {
-        path: 'scrap',
-        element: <ScrapScreen />
-      }
-    ]
-  }
-])
+        path: "scrap",
+        element: <ScrapScreen />,
+      },
+    ],
+  },
+]);
 
-export default router
+export default router;
