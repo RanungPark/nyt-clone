@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { RouterProvider } from 'react-router-dom';
-import router from './Router';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { defaultTheme } from './theme';
-import {QueryClient, QueryClientProvider } from 'react-query';
-import {ReactQueryDevtools} from 'react-query/devtools'
-import {RecoilRoot} from 'recoil'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { RouterProvider } from "react-router-dom";
+import router from "./Router";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { defaultTheme } from "./theme";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+import { RecoilRoot } from "recoil";
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600&family=Source+Sans+3:wght@300;400&display=swap');
@@ -67,12 +67,12 @@ const GlobalStyle = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
-`
+`;
 
-const qureyClient = new QueryClient()
+const qureyClient = new QueryClient();
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement 
+  document.getElementById("root") as HTMLElement
 );
 
 root.render(
@@ -81,9 +81,9 @@ root.render(
       <QueryClientProvider client={qureyClient}>
         <ThemeProvider theme={defaultTheme}>
           <GlobalStyle />
-          <RouterProvider router={router}/>
+          <RouterProvider router={router} />
         </ThemeProvider>
-        <ReactQueryDevtools initialIsOpen={false}/>
+        <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </RecoilRoot>
   </React.StrictMode>
