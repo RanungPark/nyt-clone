@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/nyt-clone/static/js/main.37bdbcd5.js",
+    "main.js": "/nyt-clone/static/js/main.b8d7899d.js",
     "static/media/Cellular.svg": "/nyt-clone/static/media/Cellular.ef6c7ea82f78977bcd4e8ce3f3d7987b.svg",
     "static/media/Time.svg": "/nyt-clone/static/media/Time.58ab5fd499d9c9536e30475f1102841a.svg",
     "static/media/Battery.svg": "/nyt-clone/static/media/Battery.c4ab9863c8138d4001cfc1b38173e557.svg",
@@ -17,9 +17,9 @@
     "static/media/StarFill.svg": "/nyt-clone/static/media/StarFill.50d3c8e5d51483da34f5843a2d7c47f4.svg",
     "static/media/Scrap.svg": "/nyt-clone/static/media/Scrap.dd0f69c0564b72124a97c678f06a5a40.svg",
     "static/media/ScrapFill.svg": "/nyt-clone/static/media/ScrapFill.560655ed9d06615cae6db9a2ad8bb22c.svg",
-    "main.37bdbcd5.js.map": "/nyt-clone/static/js/main.37bdbcd5.js.map"
+    "main.b8d7899d.js.map": "/nyt-clone/static/js/main.b8d7899d.js.map"
   },
   "entrypoints": [
-    "static/js/main.37bdbcd5.js"
+    "static/js/main.b8d7899d.js"
   ]
 }
