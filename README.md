@@ -2,7 +2,9 @@
 
 💁‍♂️New York Times에서 제공하는 API를 가공하여 기사 정보 검색 서비스 클론 코딩 프로젝트
 
-https://ranungpark.github.io/nyt-clone/
+
+[New York Times 클론 배포 페이지](https://ranungpark.github.io/nyt-clone/)
+
 
 ## 개발 기간
 
